@@ -1,0 +1,15 @@
+/* PARTIAL: SITE OVERLAY
+-------------------------------------------- */
+
+.vlt-site-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+	background-color: var(--vlt-color-7-4);
+	opacity: 0;
+	z-index: z('site-overlay');
+	@include admin-sticky-fix;
+}

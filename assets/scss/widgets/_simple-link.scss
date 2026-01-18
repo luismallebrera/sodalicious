@@ -1,0 +1,47 @@
+/* WIDGET: SIMPLE LINK
+-------------------------------------------- */
+
+.vlt-simple-link {
+	position: relative;
+	display: inline-flex !important;
+	padding-right: px2rem(18px);
+	padding-left: 0;
+	overflow: hidden;
+	font-size: map-get($scales, 's10');
+	font-weight: 600;
+	line-height: 1.1;
+	color: var(--vlt-color-7);
+	transition: padding var(--vlt-transition-duration) var(--vlt-transition-easing);
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 2px;
+		bottom: 0;
+		left: 92%;
+		width: px2rem(14px);
+		height: 2px;
+		margin: auto 0;
+		background-color: currentColor;
+		transition-delay: 100ms, 0s;
+		transition-timing-function: var(--vlt-transition-easing);
+		transition-duration: 500ms;
+		transition-property: width, left;
+		transform: translateZ(0);
+	}
+
+	&:hover {
+		padding-right: 0;
+		padding-left: px2rem(18px);
+		text-decoration: none;
+
+		&::before {
+			left: calc(-130% + 10px);
+			width: 130%;
+			transition-delay: 0s, 100ms;
+			transition-duration: var(--vlt-transition-duration);
+		}
+
+	}
+
+}

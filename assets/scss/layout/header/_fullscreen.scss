@@ -1,0 +1,128 @@
+/* HEADER: FULLSCREEN
+-------------------------------------------- */
+
+.vlt-header--fullscreen {
+
+	.vlt-navbar-inner {
+		display: flex;
+		align-items: center;
+	}
+
+	.vlt-navbar-logo,
+	.vlt-navbar-buttons {
+		display: flex;
+	}
+
+	.vlt-navbar-logo {
+		margin-right: auto;
+	}
+
+}
+
+.vlt-nav--fullscreen {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	overflow: hidden;
+	visibility: hidden;
+	flex-direction: column;
+	background-color: var(--vlt-color-0);
+	opacity: 0;
+	transition: opacity var(--vlt-transition-duration) var(--vlt-transition-easing), visibility var(--vlt-transition-duration) var(--vlt-transition-easing);
+	backface-visibility: hidden;
+	z-index: z('fullscreen-menu');
+
+	@include admin-sticky-fix;
+
+	.vlt-is--theme-borders & {
+		right: var(--vlt-theme-border-thickness);
+		bottom: var(--vlt-theme-border-thickness);
+		left: var(--vlt-theme-border-thickness);
+	}
+
+	&.is-open {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		min-height: var(--vlt-navbar-height);
+		padding: 0 px2rem(50px);
+		color: var(--vlt-color-7);
+		text-align: right;
+
+		.vlt-menu-burger {
+			display: inline-flex;
+			font-size: map-get($scales, 's9');
+			color: inherit;
+			transition: opacity var(--vlt-transition-duration) var(--vlt-transition-easing);
+
+			i.ri-close-fill {
+				font-size: 1.3em;
+			}
+
+			&:hover {
+				opacity: 0.8;
+			}
+
+		}
+
+	}
+
+	&__navigation {
+		@extend %vlt_large_navigation;
+	}
+
+	&__footer {
+		padding: px2rem(50px) 0;
+		color: var(--vlt-color-7);
+
+		.vlt-widget~.vlt-widget {
+			margin-top: 0;
+		}
+
+	}
+
+}
+
+/* FULLSCREEN DARK
+-------------------------------------------- */
+
+.vlt-nav--fullscreen-dark {
+	background-color: var(--vlt-color-7);
+
+	.vlt-nav--fullscreen__navigation ul.sf-menu li {
+
+		a {
+			color: var(--vlt-color-3);
+		}
+
+		&:hover>a,
+		&.current-menu-item>a,
+		&.current-menu-ancestor>a {
+			color: var(--vlt-color-0);
+		}
+
+	}
+
+	.vlt-nav--fullscreen__header,
+	.vlt-nav--fullscreen__footer {
+		color: var(--vlt-color-0);
+
+		a:hover {
+			color: inherit;
+		}
+
+		.widget_custom_html {
+			line-height: 2;
+		}
+
+	}
+
+}

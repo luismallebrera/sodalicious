@@ -1,0 +1,145 @@
+/* CHECKOUT PAGE
+-------------------------------------------- */
+
+.woocommerce-order {
+
+	.woocommerce-order-overview {
+		line-height: 2.5;
+		list-style-type: none;
+	}
+
+	.woocommerce-order-details__title,
+	.woocommerce-column__title,
+	.woocommerce-order-downloads__title {
+		margin: px2rem(50px) 0 px2rem(30px);
+		font-size: map-get($scales, 's5');
+	}
+
+	.woocommerce-customer-details address {
+		margin-bottom: 0;
+	}
+
+}
+
+.vlt-woocommerce-form-coupon {
+	max-width: px2rem(450px);
+	margin-bottom: px2rem(30px);
+
+	.vlt-btn {
+		flex-shrink: 0;
+	}
+
+}
+
+.woocommerce-billing-fields,
+.woocommerce-additional-fields,
+.woocommerce-checkout-review-order {
+
+	h3 {
+		margin-bottom: px2rem(30px);
+	}
+
+}
+
+.woocommerce-checkout-review-order {
+	padding-left: px2rem(40px);
+
+	@include media-breakpoint-down(lg) {
+		padding-left: 0;
+		margin-top: px2rem(60px);
+	}
+
+}
+
+.woocommerce-checkout-payment {
+	margin-top: px2rem(30px);
+
+	.methods {
+		margin-bottom: px2rem(30px);
+		list-style-type: none;
+	}
+
+	.woocommerce-privacy-policy-text {
+		margin-bottom: px2rem(30px);
+	}
+
+}
+
+.vlt-checkout-review-order-table {
+
+	tbody {
+
+		td,
+		th {
+			padding: 0;
+			border: none;
+		}
+
+		td {
+			padding-bottom: px2rem(20px);
+
+		}
+
+	}
+
+	tfoot {
+
+		td {
+			text-align: right;
+		}
+
+	}
+
+}
+
+.vlt-checkout-product {
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	.vlt-checkout-product__thumbnail+.vlt-checkout-product__content {
+		margin-left: px2rem(20px);
+	}
+
+	&__thumbnail {
+		max-width: px2rem(90px);
+		overflow: hidden;
+		flex-shrink: 0;
+
+		img {
+			margin: 0;
+			transition: transform var(--vlt-transition-duration) var(--vlt-transition-easing);
+			backface-visibility: hidden;
+		}
+
+	}
+
+	&__content {
+		overflow: hidden;
+		flex-basis: 100%;
+
+		h5 {
+			margin-bottom: px2rem(10px);
+			overflow: hidden;
+			font-size: map-get($scales, 's10');
+			line-height: 1.5;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+
+			a {
+				@extend %vlt_underline_link;
+			}
+
+		}
+
+		.amount {
+			@extend %vlt_display_2;
+		}
+
+	}
+
+	&:hover .vlt-checkout-product__thumbnail img {
+		transform: scale(1.1);
+	}
+
+}

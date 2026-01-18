@@ -1,0 +1,62 @@
+/* PLUGIN: FANCYBOX
+-------------------------------------------- */
+
+.fancybox-bg {
+	background-color: var(--vlt-color-7);
+}
+
+.fancybox-is-open .fancybox-bg {
+	opacity: 0.8;
+}
+
+.fancybox-loading {
+	border: 2px solid var(--vlt-color-0-2);
+	border-top-color: var(--vlt-color-7);
+}
+
+/* BUTTONS
+-------------------------------------------- */
+
+.fancybox-navigation,
+.fancybox-toolbar,
+.fancybox-content {
+
+	.fancybox-button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: px2rem(60px);
+		height: px2rem(60px);
+		padding: 0;
+		font-size: map-get($scales, 's10');
+		color: var(--vlt-color-0);
+		cursor: pointer;
+		background-color: var(--vlt-color-7);
+		transition: all var(--vlt-transition-duration) var(--vlt-transition-easing);
+
+		i {
+			font-size: 1.2em;
+		}
+
+		&:hover {
+			color: var(--vlt-color-2);
+			background-color: var(--vlt-color-7);
+		}
+
+	}
+
+	.fancybox-close-small {
+		top: px2rem(-30px);
+		right: px2rem(-30px);
+		opacity: 1;
+	}
+
+}
+
+.fancybox-navigation .fancybox-button--arrow_left:hover i {
+	animation: vlt_animate_icon_left var(--vlt-transition-duration) var(--vlt-transition-easing) forwards;
+}
+
+.fancybox-navigation .fancybox-button--arrow_right:hover i {
+	animation: vlt_animate_icon_right var(--vlt-transition-duration) var(--vlt-transition-easing) forwards;
+}

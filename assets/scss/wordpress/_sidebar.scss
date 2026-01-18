@@ -1,0 +1,75 @@
+/* WORDPRESS: SIDEBAR
+-------------------------------------------- */
+
+.vlt-sidebar--right {
+	padding-left: px2rem(40px);
+
+	@include media-breakpoint-down(lg) {
+		padding-left: 0;
+		margin-top: px2rem(60px);
+	}
+
+}
+
+.vlt-sidebar--left {
+	padding-right: px2rem(40px);
+
+	@include media-breakpoint-down(lg) {
+		padding-right: 0;
+		margin-top: px2rem(60px);
+	}
+
+}
+
+/* WIDGET
+-------------------------------------------- */
+
+.vlt-widget {
+	display: block;
+
+	&~& {
+		margin-top: px2rem(70px);
+	}
+
+	.vlt-widget__title {
+		margin: 0 0 px2rem(30px);
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+
+		li {
+			clear: both;
+		}
+
+		.children {
+			margin-left: px2rem(10px);
+		}
+
+	}
+
+}
+
+// import
+@import 'widgets/categories';
+@import 'widgets/search-form';
+@import 'widgets/archive';
+@import 'widgets/pages';
+@import 'widgets/meta';
+@import 'widgets/recent-comments';
+@import 'widgets/recent-entries';
+@import 'widgets/nav-menu';
+@import 'widgets/tag-cloud';
+@import 'widgets/text';
+@import 'widgets/rss';
+@import 'widgets/calendar';
+@import 'widgets/sodalicious-widget-socials';
+@import 'widgets/sodalicious-recent-posts';
+@import 'widgets/sodalicious-popular-posts';
+@import 'widgets/sodalicious-trending-posts';
+@import 'widgets/woo-rating-filter';
+@import 'widgets/woo-mini-cart';
+@import 'widgets/woo-products';
+@import 'widgets/woo-price-filter';

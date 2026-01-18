@@ -1,0 +1,30 @@
+/* WORK: STYLE 1
+-------------------------------------------- */
+
+.vp-portfolio__items-style-sodalicious_work_style_1 {
+
+	.vp-portfolio__item {
+		text-align: center;
+		transition: opacity var(--vlt-transition-duration) var(--vlt-transition-easing);
+
+		&:hover {
+			opacity: 1 !important;
+		}
+
+	}
+
+	.vp-portfolio__item-meta-title {
+		display: inline-flex;
+		font-size: map-get($scales, 's4');
+
+		a {
+			color: inherit;
+		}
+
+	}
+
+}
+
+.vp-portfolio[data-vp-items-style="sodalicious_work_style_1"] .vp-portfolio__items-wrap:hover .vp-portfolio__item {
+	opacity: 0.1;
+}

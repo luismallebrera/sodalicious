@@ -1,0 +1,33 @@
+/* PARTIAL: SUBSCRIBE FORM
+-------------------------------------------- */
+
+.vlt-subscribe-form {
+	position: relative;
+	max-width: px2rem(450px);
+
+	button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		padding: 0;
+		margin: 0;
+		font-weight: 600;
+		color: var(--vlt-color-7);
+		cursor: pointer;
+		background: none;
+		border: none;
+		transition: color var(--vlt-transition-duration) var(--vlt-transition-easing);
+
+		i {
+			margin-left: px2rem(10px);
+			font-size: 95%;
+		}
+
+		&:hover {
+			color: var(--vlt-color-6);
+		}
+
+	}
+
+}

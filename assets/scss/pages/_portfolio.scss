@@ -1,0 +1,93 @@
+/* PAGE: PORTFOLIO
+-------------------------------------------- */
+
+.vp-portfolio[data-vp-layout=slider] {
+	--vp-layout-slider--arrows__width: auto;
+	--vp-layout-slider--arrows__height: auto;
+	--vp-layout-slider--arrows__offset: 50px;
+	--vp-layout-slider--arrows__compensation: 10px;
+	--vp-layout-slider--arrows__color: var(--vlt-color-7);
+	--vp-layout-slider--arrows__background-color: transparent;
+	--vp-layout-slider--arrows__border-radius: 0;
+	--vp-layout-slider--arrows__box-shadow: none;
+	--vp-layout-slider--arrows-hover__box-shadow: none;
+
+	.vp-portfolio__items-arrow {
+		font-size: 1.2em;
+		outline: none;
+	}
+
+	.vp-portfolio__items-bullets {
+		line-height: 0;
+
+		>.swiper-pagination-bullet {
+			display: inline-block;
+			width: 8px;
+			height: 8px;
+			color: var(--vlt-color-7);
+			cursor: pointer;
+			background-color: currentColor;
+			border-radius: 100%;
+			outline: none;
+			opacity: .2;
+			transition: opacity var(--vlt-transition-duration) var(--vlt-transition-easing);
+
+			&:not(.swiper-pagination-bullet-active):hover {
+				opacity: 0.5;
+			}
+
+			&.swiper-pagination-bullet-active {
+				opacity: 1;
+			}
+
+		}
+
+		.swiper-pagination-bullet+.swiper-pagination-bullet {
+			margin-left: 8px;
+		}
+
+	}
+
+}
+
+.vp-portfolio.vp-portfolio__loading .vp-portfolio__items-wrap,
+.vp-portfolio.vp-portfolio__loading .vp-portfolio__thumbnails-wrap,
+.vp-portfolio.vp-portfolio__loading .vp-portfolio__layout-elements {
+	opacity: .8 !important;
+}
+
+.vp-portfolio__preloader {
+	margin-top: px2rem(90px) !important;
+
+	span {
+		background-color: var(--vlt-color-2) !important;
+	}
+
+}
+
+.vlt-page-content .vp-portfolio {
+	--vp-elements__gap: 0;
+}
+
+[data-vp-slider-slides-per-view="auto"] .swiper-slide {
+	width: auto;
+}
+
+.vp-portfolio__item-tilt {
+
+	.vp-portfolio__item-meta {
+		transition: transform 200ms linear;
+	}
+
+}
+
+// import
+@import 'portfolio/pagination';
+@import 'portfolio/filters';
+@import 'portfolio/styles/default';
+@import 'portfolio/styles/fly';
+@import 'portfolio/styles/emerge';
+@import 'portfolio/styles/fade';
+@import 'portfolio/work/work-style-1';
+@import 'portfolio/work/work-style-2';
+@import 'portfolio/work/work-style-4';

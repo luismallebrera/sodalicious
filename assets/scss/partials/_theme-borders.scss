@@ -1,0 +1,56 @@
+/* PARTIAL: THEME BORDERS
+-------------------------------------------- */
+
+.vlt-is--theme-borders body {
+	padding: var(--vlt-theme-border-thickness);
+}
+
+.vlt-theme-borders > * {
+	position: fixed;
+	pointer-events: none;
+	background-color: var(--vlt-theme-border-color);
+	z-index: z('theme-borders');
+
+	&[class*='--shadow'] {
+		box-shadow: 0 0px 16px 0px var(--vlt-color-7-1);
+	}
+
+}
+
+.vlt-theme-borders__top {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: var(--vlt-theme-border-thickness);
+
+	.admin-bar & {
+		top: 46px;
+
+		@media screen and (min-width: 783px) {
+			top: 32px;
+		}
+
+	}
+
+}
+
+.vlt-theme-borders__bottom {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: var(--vlt-theme-border-thickness);
+}
+
+.vlt-theme-borders__left {
+	top: 0;
+	left: 0;
+	width: var(--vlt-theme-border-thickness);
+	height: 100%;
+}
+
+.vlt-theme-borders__right {
+	top: 0;
+	right: 0;
+	width: var(--vlt-theme-border-thickness);
+	height: 100%;
+}

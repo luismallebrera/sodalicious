@@ -1,0 +1,137 @@
+/* Master Stylesheet
+ * Version: 1.0
+ *
+ * Powered by SODAThemes
+ *
+ * 00. Framework
+ * 01. Helpers
+ * 02. Base
+ * 03. Layout
+ * 04. Pages
+ * 05. Partials
+ * 06. Widgets
+ * 07. WordPress
+ * 08. WooCommerce
+ * 09. Plugins
+ */
+
+/* 00. Framework */
+@import "plugins/bootstrap";
+
+/* 01. Helpers */
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+@import 'abstracts/keyframes';
+@import 'abstracts/snippets';
+
+/* 02. Base */
+@import 'base/helper-classes';
+@import 'base/gutenberg';
+@import 'base/custom-css';
+@import 'base/typography';
+
+/* 03. Layout */
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+
+/* 04. Pages */
+@import 'pages/404';
+@import 'pages/blog';
+@import 'pages/portfolio';
+
+/* 05. Partials */
+@import 'partials/about-author';
+@import 'partials/cursor';
+@import 'partials/back-to-top';
+@import 'partials/follow-info';
+@import 'partials/marquee-text';
+@import 'partials/post-media-title';
+@import 'partials/search-popup';
+@import 'partials/site-overlay';
+@import 'partials/site-preloader';
+@import 'partials/site-protection';
+@import 'partials/social-icons';
+@import 'partials/sticky-column';
+@import 'partials/subscribe-form';
+@import 'partials/theme-borders';
+@import 'partials/tooltip-image';
+
+/* 06. Widgets */
+@import 'widgets/action-block';
+@import 'widgets/alert-message';
+@import 'widgets/awards';
+@import 'widgets/button';
+@import 'widgets/changelog';
+@import 'widgets/contact-form-7';
+@import 'widgets/content-marquee';
+@import 'widgets/content-slider';
+@import 'widgets/countdown';
+@import 'widgets/counter-up';
+@import 'widgets/demo-item';
+@import 'widgets/divider';
+@import 'widgets/fancy-text';
+@import 'widgets/google-map';
+@import 'widgets/heading';
+@import 'widgets/images-compare';
+@import 'widgets/list-editor';
+@import 'widgets/mask-image';
+@import 'widgets/page-title';
+@import 'widgets/partner';
+@import 'widgets/phone-block';
+@import 'widgets/pie-chart';
+@import 'widgets/pricing-table';
+@import 'widgets/progress-bar';
+@import 'widgets/section-title';
+@import 'widgets/service-box';
+@import 'widgets/simple-icon';
+@import 'widgets/simple-image';
+@import 'widgets/simple-link';
+@import 'widgets/slider-controls';
+@import 'widgets/slider-fixed-bar';
+@import 'widgets/sticky-column';
+@import 'widgets/styled-list';
+@import 'widgets/team-member';
+@import 'widgets/testimonial';
+@import 'widgets/timeline';
+@import 'widgets/twitter-review';
+@import 'widgets/types-list';
+@import 'widgets/video-button';
+
+@import 'widgets/showcase/showcase-1';
+@import 'widgets/showcase/showcase-2';
+@import 'widgets/showcase/showcase-3';
+@import 'widgets/showcase/showcase-4';
+@import 'widgets/showcase/showcase-5';
+@import 'widgets/showcase/showcase-6';
+@import 'widgets/showcase/showcase-7';
+@import 'widgets/showcase/showcase-8';
+@import 'widgets/showcase/showcase-9';
+@import 'widgets/showcase/showcase-10';
+@import 'widgets/showcase/showcase-11';
+@import 'widgets/showcase/showcase-12';
+
+/* 07. WordPress */
+@import 'wordpress/sidebar';
+@import 'wordpress/link-pages';
+@import 'wordpress/pagination';
+@import 'wordpress/mejs';
+@import 'wordpress/page-navigation';
+@import 'wordpress/password-form';
+@import 'wordpress/comments';
+
+/* 08. WooCommerce */
+@import 'woocommerce/woocommerce';
+
+/* 09. Plugins */
+@import 'plugins/bootstrap/badge';
+@import 'plugins/aos';
+@import 'plugins/fancybox';
+@import 'plugins/isotope';
+@import 'plugins/jarallax';
+@import 'plugins/justified-gallery';
+@import 'plugins/simple-gist';
+@import 'plugins/superfish';
+@import 'plugins/swiper';
+@import 'plugins/tippy';

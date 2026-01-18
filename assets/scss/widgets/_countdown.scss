@@ -1,0 +1,33 @@
+/* WIDGET: COUNTODWN
+-------------------------------------------- */
+
+.vlt-countdown {
+	display: grid;
+	margin-right: auto;
+	margin-left: auto;
+
+	&__item {
+		text-align: center;
+
+		.digits {
+			font-size: map-get($scales, 's4');
+			font-weight: 600;
+			color: var(--vlt-color-7);
+			white-space: nowrap;
+
+			&.d-inline-block {
+				margin-right: 15px;
+			}
+
+			&.d-block {
+				margin-bottom: 15px;
+			}
+		}
+
+		.label {
+			@extend %vlt_display_2;
+		}
+
+	}
+
+}

@@ -1,0 +1,36 @@
+/* PARTIAL: SOCIAL ICONS
+-------------------------------------------- */
+
+.vlt-social-icon {
+	backface-visibility: hidden;
+}
+
+/* STYLE 1 (text)
+-------------------------------------------- */
+
+.vlt-social-icon--style-1 {
+	font-size: map-get($scales, 's10');
+	@extend %vlt_underline_link;
+
+	&+& {
+		margin-left: px2rem(30px);
+	}
+
+}
+
+/* STYLE 2 (icon)
+-------------------------------------------- */
+
+.vlt-social-icon--style-2 {
+	font-size: map-get($scales, 's10');
+	backface-visibility: hidden;
+
+	&+& {
+		margin-left: px2rem(15px);
+	}
+
+	&:hover {
+		opacity: 0.9;
+	}
+
+}

@@ -1,0 +1,201 @@
+/* WORK: EMERGE
+-------------------------------------------- */
+
+.vp-portfolio__items-style-emerge {
+
+	// Links.
+	--vp-items-style-emerge--links__color: inherit;
+	--vp-items-style-emerge--links-hover__color: var(--vlt-color-7);
+
+	// Image.
+	--vp-items-style-emerge--image__border-radius: 0;
+	--vp-items-style-emerge--image-hover__transform: scale(1.1);
+
+	// Overlay.
+	--vp-items-style-emerge--overlay__padding-v: 50px;
+	--vp-items-style-emerge--overlay__padding-h: 50px;
+	--vp-items-style-emerge--overlay__color: var(--vlt-color-0);
+	--vp-items-style-emerge--overlay__background-color: transparent;
+
+	// Meta.
+	--vp-items-style-emerge--meta-items__gap: 5px;
+
+	// Meta Categories.
+	--vp-items-style-emerge--meta-categories__gap: .4em;
+	--vp-items-style-emerge--meta-categories__separator: ", ";
+
+	// Meta Inline.
+	--vp-items-style-emerge--meta-inline__gap: 1em;
+
+	// Meta Parts.
+	--vp-items-style-emerge--meta-part-icon__offset: .5em;
+
+	.vp-portfolio__item {
+		border-radius: var(--vp-items-style-emerge--image__border-radius);
+
+		// fix for safari border-radius.
+		// https://github.com/nk-crew/visual-portfolio/issues/150
+		z-index: 0;
+	}
+
+	.vp-portfolio__item a {
+		color: var(--vp-items-style-emerge--links__color);
+		outline: none;
+		box-shadow: none;
+
+		&:hover,
+		&:focus {
+			color: var(--vp-items-style-emerge--links-hover__color);
+		}
+
+	}
+
+	.vp-portfolio__item-overlay {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: var(--vp-items-style-emerge--overlay__padding-v) var(--vp-items-style-emerge--overlay__padding-h);
+		color: var(--vp-items-style-emerge--overlay__color);
+		pointer-events: none;
+		background-color: var(--vp-items-style-emerge--overlay__background-color);
+	}
+
+	// fix some themes figcaption styles.
+	figcaption.vp-portfolio__item-overlay {
+		font-style: inherit;
+	}
+
+	// meta
+	.vp-portfolio__item-meta {
+		display: flex;
+		color: inherit;
+		flex-direction: column;
+
+		>* {
+			margin-bottom: var(--vp-items-style-emerge--meta-items__gap);
+		}
+
+		> :last-child {
+			margin-bottom: 0;
+		}
+
+	}
+
+	.vp-portfolio__item-meta-categories {
+		display: inline-flex;
+		margin-left: calc(-1 * var(--vp-items-style-emerge--meta-categories__gap));
+		flex-wrap: wrap;
+
+		.vp-portfolio__item-meta-category {
+			display: flex;
+			margin-left: var(--vp-items-style-emerge--meta-categories__gap);
+
+			&::after {
+				content: var(--vp-items-style-emerge--meta-categories__separator);
+			}
+
+			&:last-of-type::after {
+				content: none;
+			}
+
+		}
+
+	}
+
+	.vp-portfolio__item-meta-title {
+		margin-top: 0;
+		margin-right: 0;
+		margin-left: 0;
+		color: inherit;
+	}
+
+	.vp-portfolio__item-meta-inline {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: calc(-1 * var(--vp-items-style-emerge--meta-inline__gap));
+		flex-wrap: wrap;
+
+		>* {
+			margin-left: var(--vp-items-style-emerge--meta-inline__gap);
+		}
+
+	}
+
+	.vp-portfolio__item-meta-part-icon {
+		margin-right: var(--vp-items-style-emerge--meta-part-icon__offset);
+		line-height: 1;
+	}
+
+	.vp-portfolio__item-meta-author {
+		display: flex;
+		align-items: center;
+
+		img {
+			width: 1em;
+			height: auto;
+			border-radius: 1em;
+		}
+
+	}
+
+	// Transitions
+	.vp-portfolio__item-img {
+		background-color: var(--vlt-color-7);
+
+		img {
+			opacity: .7;
+			transition: transform 1s var(--vlt-transition-easing), opacity 1s var(--vlt-transition-easing);
+			will-change: transform, opacity;
+		}
+
+	}
+
+	.vp-portfolio__item:hover,
+	.vp-portfolio__item:focus {
+
+		.vp-portfolio__item-img img {
+			opacity: 0.5;
+			transform: var(--vp-items-style-emerge--image-hover__transform);
+		}
+
+	}
+
+	// fix align for gutenberg block.
+	figcaption.vp-portfolio__item-meta {
+		text-align: inherit;
+	}
+
+	// align
+	.vp-portfolio__item-align-left {
+		text-align: left;
+
+		.vp-portfolio__item-meta-categories,
+		.vp-portfolio__item-meta-inline {
+			justify-content: flex-start;
+		}
+
+	}
+
+	.vp-portfolio__item-align-center {
+		text-align: center;
+
+		.vp-portfolio__item-meta-categories,
+		.vp-portfolio__item-meta-inline {
+			justify-content: center;
+		}
+
+	}
+
+	.vp-portfolio__item-align-right {
+		text-align: right;
+
+		.vp-portfolio__item-meta-categories,
+		.vp-portfolio__item-meta-inline {
+			justify-content: flex-end;
+		}
+
+	}
+
+}

@@ -1,0 +1,23 @@
+/* PARTIAL: POST CATEGORY OUTSIDE
+-------------------------------------------- */
+
+.vlt-post-category-outside {
+	font-size: 0;
+
+	a {
+		display: inline-flex;
+		padding: px2rem(4px) px2rem(15px);
+		margin: 0 4px 4px 0;
+		font-size: map-get($scales, 's12');
+		line-height: 1.7;
+		color: var(--vlt-color-0);
+		background-color: var(--vlt-color-7);
+		@extend %vlt_display_2;
+
+		&:hover {
+			color: var(--vlt-color-2);
+		}
+
+	}
+
+}

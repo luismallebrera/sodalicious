@@ -1,0 +1,143 @@
+/* PLUGIN: SWIPER
+-------------------------------------------- */
+
+/* LAZYLOAD
+-------------------------------------------- */
+
+:root {
+	--swiper-theme-color: var(--vlt-color-7);
+}
+
+.swiper-lazy:not(.swiper-lazy-loaded) {
+	opacity: 0;
+}
+
+.vlt-main .swiper-container .swiper-slide figure {
+	line-height: unset;
+}
+
+.swiper-lazy-preloader {
+	border: 4px solid var(--vlt-color-7-1);
+	border-top-color: transparent;
+	border-radius: 50%;
+
+	&::after {
+		display: none !important;
+	}
+
+}
+
+.vlt-swiper-pagination {
+	line-height: 0;
+
+	.vlt-swiper-pagination-bullet {
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		cursor: pointer;
+		background-color: currentColor;
+		border-radius: 100%;
+		outline: none;
+		opacity: .2;
+		transition: opacity var(--vlt-transition-duration) var(--vlt-transition-easing);
+
+		&:not(.vlt-swiper-pagination-bullet-active):hover {
+			opacity: 0.5;
+		}
+
+		&.vlt-swiper-pagination-bullet-active {
+			opacity: 1;
+		}
+
+	}
+
+	.vlt-swiper-pagination-bullet+.vlt-swiper-pagination-bullet {
+		margin-left: 8px;
+	}
+
+}
+
+/* NAVIGATION
+-------------------------------------------- */
+
+.vlt-swiper-pagination.swiper-pagination-fraction {
+	color: inherit;
+}
+
+.vlt-swiper-button-prev,
+.vlt-swiper-button-next {
+	user-select: none;
+	outline: none;
+}
+
+/* PROGRESS BAR
+-------------------------------------------- */
+
+.vlt-swiper-progress {
+	display: flex;
+	align-items: center;
+	line-height: 0;
+
+	.sep {
+		margin: 0 px2rem(2px);
+	}
+
+	&[data-direction="horizontal"] {
+		color: var(--vlt-color-7);
+
+		.has-white-color & {
+			color: var(--vlt-color-3);
+		}
+
+	}
+
+	a {
+		color: var(--vlt-color-5);
+
+		&:hover {
+			color: var(--vlt-color-7);
+
+			.has-white-color & {
+				color: var(--vlt-color-0);
+			}
+
+		}
+
+	}
+
+	.bar {
+		position: relative;
+		height: px2rem(2px);
+		margin: 0 px2rem(25px);
+		background-color: var(--vlt-color-2);
+		transition: background-color var(--vlt-transition-duration) var(--vlt-transition-easing);
+		flex-basis: 100%;
+
+		.has-white-color & {
+			background-color: var(--vlt-color-3-5);
+		}
+
+		>span {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: var(--vlt-color-7);
+			transition: all 1s;
+			transform: translate3d(0, 0, 0) scaleX(var(--scaleX));
+			transform-origin: left top;
+
+			.has-white-color & {
+				background-color: var(--vlt-color-0);
+			}
+
+		}
+
+	}
+
+	&[data-direction="vertical"] .bar {
+		width: px2rem(210px);
+	}
+
+}

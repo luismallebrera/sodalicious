@@ -1,0 +1,34 @@
+/* WIDGET: CATEGORIES
+-------------------------------------------- */
+
+.vlt-widget.widget_categories,
+.vlt-widget.widget_product_categories,
+%widget-categories,
+%widget-product-categories {
+	color: var(--vlt-color-7);
+
+	a {
+		@extend %vlt_underline_link;
+	}
+
+	li {
+
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 6px;
+			height: 6px;
+			margin-top: -3px;
+			margin-right: 12px;
+			vertical-align: middle;
+			background-color: currentColor;
+		}
+
+	}
+
+	li+li,
+	ul.children {
+		margin-top: px2rem(16px);
+	}
+
+}

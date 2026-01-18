@@ -1,0 +1,35 @@
+/* POST: STYLE 3
+-------------------------------------------- */
+
+.vlt-post--style-3 {
+
+	.vlt-post-media+.vlt-post-content,
+	.vp-portfolio__item-img-wrap+.vlt-post-content {
+		padding-top: px2rem(35px);
+	}
+
+	.vlt-post-header {
+		margin-bottom: px2rem(20px);
+
+		.vlt-post-meta {
+			margin-bottom: px2rem(15px);
+		}
+
+		.vlt-post-title {
+			font-size: map-get($scales, 's6');
+			line-height: 1.5;
+
+			[data-vp-tiles-type="4|1,0.75|1,0.85|1,0.66|1,1|1,0.85|1,0.66|1,1|1,0.75|"] & {
+				font-size: map-get($scales, 's7');
+			}
+
+		}
+
+	}
+
+	.vlt-post-footer {
+		margin-top: px2rem(30px);
+		color: var(--vlt-color-7);
+	}
+
+}

@@ -1,0 +1,26 @@
+/* WIDGET: SERVICE BOX
+-------------------------------------------- */
+
+.vlt-service-box {
+	position: relative;
+	text-align: center;
+
+	&__title {
+		margin-top: px2rem(30px);
+
+		a {
+			@extend %vlt_underline_link;
+
+			&:hover {
+				color: inherit;
+			}
+
+		}
+
+	}
+
+	&__text {
+		margin: px2rem(20px) 0 0;
+	}
+
+}

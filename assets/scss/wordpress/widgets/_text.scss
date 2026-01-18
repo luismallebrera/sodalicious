@@ -1,0 +1,25 @@
+/* WIDGET: TEXT
+-------------------------------------------- */
+
+.vlt-widget.widget_text {
+	font-size: map-get($scales, 's10');
+
+	&.vlt-widget--white {
+		line-height: 1.7;
+
+		ul {
+			line-height: 2;
+		}
+
+	}
+
+	img {
+		margin-bottom: px2rem(30px);
+	}
+
+	.vlt-social-icons {
+		margin-top: px2rem(25px);
+		color: var(--vlt-color-7);
+	}
+
+}

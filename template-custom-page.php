@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Template Name: Custom Page
+ * @author: SODAThemes
+ * @version: 2.0.7
+ */
+
+get_header();
+
+?>
+
+<main class="vlt-main">
+
+	<div class="vlt-page-content">
+
+		<?php
+
+			while ( have_posts() ) : the_post();
+
+				get_template_part( 'template-parts/content/content', 'custom-page' );
+
+			endwhile;
+
+		?>
+
+	</div>
+	<!-- /.vlt-page-content -->
+
+</main>
+<!-- /.vlt-main -->
+
+<?php get_footer(); ?>

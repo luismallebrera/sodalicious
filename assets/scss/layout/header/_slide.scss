@@ -1,0 +1,137 @@
+/* HEADER: SLIDE
+-------------------------------------------- */
+
+.vlt-header--slide {
+
+	.vlt-navbar-buttons {
+		margin: 0;
+	}
+
+}
+
+.vlt-header--slide {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: var(--vlt-navbar-height);
+	z-index: z('header-slide');
+
+	@include admin-sticky-fix;
+
+	.vlt-is--theme-borders & {
+		bottom: var(--vlt-theme-border-thickness);
+	}
+
+	.vlt-navbar {
+		height: 100%;
+		padding: 0;
+
+		&-inner {
+			justify-content: space-between;
+			height: 100%;
+			padding: 0;
+			text-align: center;
+			flex-direction: column;
+			box-shadow: inset -1px 0 var(--vlt-color-2);
+
+			&--top {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: var(--vlt-navbar-height);
+
+				.vlt-navbar-logo {
+
+					h2 {
+						margin: 0 auto;
+					}
+
+				}
+
+			}
+
+			&--center {
+
+				.vlt-navbar-tagline {
+					margin-left: 0;
+					transform: rotate(180deg);
+					writing-mode: vertical-rl;
+
+					@media (max-height: 550px) {
+						display: none;
+					}
+
+				}
+
+			}
+
+			&--bottom {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: var(--vlt-navbar-height);
+			}
+
+		}
+
+	}
+
+}
+
+/* CONTENT AREA
+-------------------------------------------- */
+
+.vlt-is--header-slide {
+
+	@include media-breakpoint-up(lg) {
+
+		body {
+			padding-left: var(--vlt-navbar-height) !important;
+		}
+
+	}
+
+}
+
+/* SLIDE NAVIGATION
+-------------------------------------------- */
+
+.vlt-nav--slide {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	max-width: px2rem(800px);
+	padding: px2rem(100px) 0 px2rem(50px) var(--vlt-navbar-height);
+	visibility: hidden;
+	background-color: var(--vlt-color-0);
+	transition: transform var(--vlt-transition-duration) var(--vlt-transition-easing), visibility var(--vlt-transition-duration) var(--vlt-transition-easing);
+	transform: translate3d(-100%, 0, 0);
+	backface-visibility: hidden;
+	z-index: z('slide-menu');
+
+	@include admin-sticky-fix;
+
+	.vlt-is--theme-borders & {
+		bottom: var(--vlt-theme-border-thickness);
+		left: var(--vlt-theme-border-thickness);
+	}
+
+	&.is-open {
+		visibility: visible;
+		transform: translate3d(0, 0, 0);
+	}
+
+	&__navigation {
+		@extend %vlt_large_navigation;
+	}
+
+	.vlt-navbar-socials {
+		padding-top: px2rem(50px);
+		color: var(--vlt-color-7);
+	}
+
+}

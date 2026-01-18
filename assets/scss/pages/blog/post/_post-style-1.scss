@@ -1,0 +1,25 @@
+/* POST: STYLE 1
+-------------------------------------------- */
+
+.vlt-post--style-1 {
+
+	.vlt-post-media+.vlt-post-content,
+	.vp-portfolio__item-img-wrap+.vlt-post-content {
+		padding-top: px2rem(40px);
+	}
+
+	.vlt-post-header {
+		margin-bottom: px2rem(30px);
+
+		.vlt-post-meta {
+			margin-bottom: px2rem(15px);
+		}
+
+	}
+
+	.vlt-post-footer {
+		margin-top: px2rem(35px);
+		color: var(--vlt-color-7);
+	}
+
+}

@@ -1,0 +1,80 @@
+/* COLORS
+-------------------------------------------- */
+
+.has-white-color {
+	color: var(--vlt-color-0);
+}
+
+.has-white-background-color {
+	background-color: var(--vlt-color-0);
+}
+
+.has-black-color {
+	color: var(--vlt-color-7);
+}
+
+.has-black-background-color {
+	background-color: var(--vlt-color-7);
+}
+
+/* DISPLAYS
+-------------------------------------------- */
+
+.vlt-display-1 {
+	@extend %vlt_display_1;
+}
+
+.vlt-display-2 {
+	@extend %vlt_display_2;
+}
+
+/* GAPS
+-------------------------------------------- */
+
+.vlt-underline-link {
+	@extend %vlt_underline_link;
+}
+
+.vlt-is-stroke {
+	@include text_stroke;
+}
+
+.vlt-gap-40 {
+	@include gap(40px);
+}
+
+/* OTHERS
+-------------------------------------------- */
+
+.spin {
+	animation: vlt_spin 5s linear infinite;
+}
+
+.has-navbar-offset {
+	padding: 0 px2rem(50px);
+
+	@include media-breakpoint-down(xxl) {
+		padding: 0 $grid-gutter-width;
+	}
+
+	@include media-breakpoint-down(xl) {
+		padding: 0 $grid-gutter-width / 2;
+	}
+
+}
+
+.center-mode {
+	position: absolute !important;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	z-index: 1;
+}
+
+.z-index-n1 {
+	z-index: -1 !important;
+}
+
+.font-weight-medium {
+	font-weight: 500;
+}

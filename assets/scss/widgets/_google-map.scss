@@ -1,0 +1,49 @@
+/* WIDGET: GOOGLE MAP
+-------------------------------------------- */
+
+.vlt-google-map {
+
+	&__container {
+		font-family: var(--vlt-primary-font);
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin: 0 0 px2rem(4px);
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+
+	}
+
+	.gm-style {
+
+		.gm-style-iw-c {
+			padding: px2rem(16px) !important;
+			background-color: var(--vlt-color-0);
+			border-radius: 0;
+			box-shadow: none;
+		}
+
+		.gm-style-iw-d {
+			overflow: unset !important;
+		}
+
+		.gm-style-iw-t::after {
+			background: linear-gradient(45deg, var(--vlt-color-0) 50%, rgba(255,255,255,0) 51%, rgba(255,255,255,0) 100%);
+			box-shadow: none;
+		}
+
+		button[title=Close] {
+			top: 0 !important;
+			right: 0 !important;
+		}
+
+	}
+
+}

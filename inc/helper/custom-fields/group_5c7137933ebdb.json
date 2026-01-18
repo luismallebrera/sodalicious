@@ -1,0 +1,98 @@
+{
+    "key": "group_5c7137933ebdb",
+    "title": "[Menu] Menu Item Options",
+    "fields": [
+        {
+            "key": "field_5c7137b645254",
+            "label": "Mega Menu",
+            "name": "megamenu",
+            "type": "true_false",
+            "instructions": "Activate Mega Menu for this menu item. It works only for first level of menu.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Enable",
+            "ui_off_text": "Disable"
+        },
+        {
+            "key": "field_5c71425681b21",
+            "label": "Show Label",
+            "name": "show_label",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c7137b645254",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
+        },
+        {
+            "key": "field_5c7147abe84c8",
+            "label": "Columns",
+            "name": "columns",
+            "type": "range",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5c7137b645254",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 4,
+            "min": 2,
+            "max": 5,
+            "step": 1,
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "location\/primary-menu"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1604409898
+}

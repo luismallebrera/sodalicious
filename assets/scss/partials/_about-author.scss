@@ -1,0 +1,47 @@
+/* PARTIAL: ABOUT AUTHOR
+-------------------------------------------- */
+
+.vlt-about-author {
+	display: flex;
+	padding: px2rem(50px);
+	margin-top: px2rem(70px);
+	background-color: var(--vlt-color-1);
+
+	&__avatar {
+		max-width: px2rem(140px);
+		flex-shrink: 0;
+
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+
+	}
+
+	&__content {
+		flex-basis: 100%;
+	}
+
+	.vlt-about-author__avatar+.vlt-about-author__content {
+		margin-left: px2rem(50px);
+
+		@include media-breakpoint-down(lg) {
+			margin-left: 0;
+		}
+
+	}
+
+	&__title {
+		margin-bottom: px2rem(15px);
+		font-size: map-get($scales, 's8');
+
+		a {
+			@extend %vlt_underline_link;
+		}
+
+	}
+
+	.vlt-social-icon {
+		color: var(--vlt-color-7);
+	}
+
+}

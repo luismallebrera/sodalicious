@@ -1,0 +1,56 @@
+/* POST: STYLE 4
+-------------------------------------------- */
+
+.vlt-post--style-4 {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+
+	@include media-breakpoint-down(md) {
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+	.vlt-post-media,
+	.vp-portfolio__item-img-wrap {
+		width: 100%;
+		max-width: px2rem(390px);
+		margin-right: px2rem(70px);
+		flex-shrink: 0;
+
+		@include media-breakpoint-down(md) {
+			max-width: unset;
+			margin-right: 0;
+		}
+
+	}
+
+	.vlt-post-media+.vlt-post-content,
+	.vp-portfolio__item-img-wrap+.vlt-post-content {
+		padding: px2rem(40px) 0;
+	}
+
+	.vlt-post-content {
+		flex-basis: 100%;
+	}
+
+	.vlt-post-header {
+		margin-bottom: px2rem(20px);
+
+		.vlt-post-meta {
+			margin-bottom: px2rem(15px);
+		}
+
+		.vlt-post-title {
+			font-size: map-get($scales, 's6');
+			line-height: 1.5;
+		}
+
+	}
+
+	.vlt-post-footer {
+		margin-top: px2rem(30px);
+		color: var(--vlt-color-7);
+	}
+
+}

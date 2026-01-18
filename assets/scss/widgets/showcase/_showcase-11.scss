@@ -1,0 +1,34 @@
+/* SHOWCASE: STYLE 11
+-------------------------------------------- */
+
+.vlt-showcase--style-11 {
+	position: relative;
+	width: 100%;
+	margin-top: px2rem(-15px);
+
+	.vlt-showcase-item {
+		display: inline-block;
+		margin-top: px2rem(15px);
+	}
+
+	.vlt-showcase-title,
+	.vlt-showcase-separator {
+		margin: 0;
+
+		a:hover {
+			color: inherit;
+		}
+
+	}
+
+	.vlt-showcase-separator {
+		display: inline-block;
+		margin: 0 px2rem(15px);
+
+		&:last-of-type {
+			display: none;
+		}
+
+	}
+
+}

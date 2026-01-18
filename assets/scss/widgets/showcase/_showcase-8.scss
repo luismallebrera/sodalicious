@@ -1,0 +1,121 @@
+/* SHOWCASE: STYLE 8
+-------------------------------------------- */
+
+$min-height: 550px;
+
+.vlt-showcase--style-8 {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	min-height: $min-height;
+
+	.swiper-wrapper {
+		height: 100%;
+	}
+
+	.swiper-slide {
+		height: auto;
+	}
+
+	.vlt-showcase-item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 50vh;
+		min-height: px2rem(400px);
+		flex-direction: column;
+		backface-visibility: hidden;
+		z-index: 1;
+	}
+
+	.vlt-showcase-image {
+		position: absolute;
+		top: px2rem(-50px);
+		right: 0;
+		bottom: px2rem(-50px);
+		left: 0;
+		max-width: px2rem(960px);
+		margin: 0 auto;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		opacity: 0;
+		transition: clip-path 800ms var(--vlt-transition-easing), opacity 800ms var(--vlt-transition-easing);
+		z-index: -1;
+		clip-path: inset(0 100% 0 0);
+	}
+
+	.vlt-showcase-content {
+		position: relative;
+		display: inline-block;
+		text-align: center;
+	}
+
+	.vlt-showcase-number {
+		position: absolute;
+		top: -1em;
+		left: -1.5em;
+		font-size: map-get($scales, 's7');
+		font-weight: 700;
+		color: var(--vlt-color-0);
+		opacity: 0;
+		transition: opacity var(--vlt-transition-duration) var(--vlt-transition-easing);
+	}
+
+	.vlt-showcase-title {
+		margin: 0;
+		font-size: map-get($scales, 's1');
+		line-height: 1.25;
+		color: var(--vlt-color-0);
+		background-image: linear-gradient(to left, currentColor 0%, currentColor 50%, transparent 50%);
+		background-position: 0 0;
+		background-clip: text;
+		background-size: 200%;
+		transition: background-position 500ms var(--vlt-transition-easing);
+		@include text_stroke;
+
+		@include media-breakpoint-down(lg) {
+			font-size: map-get($scales, 's3');
+		}
+
+		@include media-breakpoint-down(md) {
+			font-size: map-get($scales, 's4');
+		}
+
+		a:hover {
+			color: inherit;
+		}
+
+	}
+
+	.vlt-showcase-category {
+		margin: px2rem(10px) 0 0;
+		color: var(--vlt-color-0);
+		opacity: 0;
+		transition: opacity var(--vlt-transition-duration) var(--vlt-transition-easing);
+		@extend %vlt_display_2;
+	}
+
+	.swiper-slide-active {
+
+		.vlt-showcase-title {
+			background-position: -100% 0;
+			transition-delay: 500ms;
+		}
+
+		.vlt-showcase-number,
+		.vlt-showcase-category {
+			opacity: 1;
+			transition-delay: 500ms;
+		}
+
+		.vlt-showcase-image {
+			opacity: 1;
+			transition-delay: 500ms;
+			clip-path: inset(0 0 0 0);
+		}
+
+	}
+
+}

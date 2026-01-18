@@ -1,0 +1,49 @@
+/* PARTIAL: CURSOR
+-------------------------------------------- */
+
+.vlt-cursor {
+	position: fixed;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	visibility: hidden;
+	z-index: z('cursor');
+
+	.circle {
+		position: fixed;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: px2rem(70px);
+			height: px2rem(70px);
+			color: var(--vlt-color-0);
+			background-color: var(--vlt-color-7);
+			border-radius: 50%;
+			opacity: 0;
+			transition: all var(--vlt-transition-duration);
+			transform: scale(.8) translate3d(0, 0, 0);
+			@extend %vlt_display_2;
+		}
+
+	}
+
+	&.is-active {
+		visibility: visible;
+	}
+
+	&.is-visible {
+		opacity: 1;
+
+		span {
+			opacity: 1;
+			transform: scale(1) translate3d(0, 0, 0);
+		}
+
+	}
+
+}

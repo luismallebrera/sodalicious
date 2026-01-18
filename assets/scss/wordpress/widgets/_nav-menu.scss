@@ -1,0 +1,31 @@
+/* WIDGET: NAV MENU
+-------------------------------------------- */
+
+.vlt-widget.widget_nav_menu,
+.vlt-widget.widget_layered_nav {
+	line-height: 2.2;
+	color: var(--vlt-color-7);
+
+	a {
+		@extend %vlt_underline_link;
+	}
+
+	ul.sub-menu {
+		display: none;
+		padding-left: px2rem(15px);
+	}
+
+}
+
+.vlt-widget.widget_layered_nav_filters ul li {
+	padding: 0;
+	line-height: 2.2;
+	color: var(--vlt-color-7);
+
+	a::before {
+		content: '\eb98';
+		margin-right: px2rem(15px);
+		font-family: map-get($icons, 'remixicon');
+	}
+
+}

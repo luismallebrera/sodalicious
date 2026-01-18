@@ -1,0 +1,34 @@
+/* WIDGET: HEADING
+-------------------------------------------- */
+
+h1.vlt-heading,
+h2.vlt-heading,
+h3.vlt-heading,
+h4.vlt-heading,
+h5.vlt-heading,
+h6.vlt-heading {
+	margin: 0;
+
+	&:not(.vlt-is-stroke) a {
+		@extend %vlt_underline_link;
+	}
+
+	&.vlt-is-stroke a {
+		color: inherit;
+		background-image: linear-gradient(to left, currentColor 0%, currentColor 50%, transparent 50%);
+		background-position: 0 0;
+		background-clip: text;
+		background-size: 200%;
+		transition: background-position 500ms var(--vlt-transition-easing);
+
+		&:hover {
+			background-position: -100% 0;
+		}
+
+	}
+
+	a:hover {
+		color: currentColor;
+	}
+
+}

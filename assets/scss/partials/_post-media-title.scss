@@ -1,0 +1,64 @@
+/* PARTIAL: POST MEDIA TITLE
+-------------------------------------------- */
+
+.vlt-post-media-title {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: var(--vlt-color-7-2);
+		z-index: -1;
+	}
+
+}
+
+/* STYLE 1 / STYLE 3
+-------------------------------------------- */
+
+.vlt-post-media-title--style-1,
+.vlt-post-media-title--style-3 {
+	min-height: px2rem(500px);
+}
+
+.vlt-post-media-title--style-3 {
+	margin-top: px2rem(100px);
+}
+
+/* STYLE 2
+-------------------------------------------- */
+
+.vlt-post-media-title--style-2 {
+	padding: px2rem(230px) 0 px2rem(200px);
+	text-align: center;
+
+	.vlt-post-title,
+	.vlt-post-meta {
+		color: var(--vlt-color-0);
+	}
+
+	.vlt-post-title {
+		font-size: map-get($scales, 's4');
+		line-height: 1.25;
+	}
+
+	.vlt-post-meta {
+		margin-top: px2rem(15px);
+
+		a {
+			@extend %vlt_underline_link;
+
+			&:hover {
+				color: inherit;
+			}
+
+		}
+
+	}
+
+}

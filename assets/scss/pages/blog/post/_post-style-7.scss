@@ -1,0 +1,94 @@
+/* POST: STYLE 7
+-------------------------------------------- */
+
+.vlt-post--style-7 {
+	position: relative;
+	padding: px2rem(50px);
+	color: var(--vlt-color-7);
+	background-color: var(--vlt-color-0);
+	box-shadow: inset 0 1px 0 0 var(--vlt-color-2), inset 0 -1px 0 0 var(--vlt-color-2);
+	transition: all var(--vlt-transition-duration) var(--vlt-transition-easing);
+
+	.vlt-post-content {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+
+		@include media-breakpoint-down(md) {
+			align-items: flex-start;
+			flex-direction: column;
+		}
+
+	}
+
+	.vlt-post-date {
+		margin-right: px2rem(120px);
+		color: inherit;
+		text-align: center;
+		transition: color var(--vlt-transition-duration) var(--vlt-transition-easing);
+
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+
+		span {
+			display: block;
+		}
+
+		span:nth-child(1) {
+			font-size: map-get($scales, 's4');
+			font-weight: 600;
+			line-height: 1;
+		}
+
+		span:nth-child(2) {
+			font-size: map-get($scales, 's10');
+		}
+
+	}
+
+	.vlt-post-title {
+		margin-right: px2rem(100px);
+		font-size: map-get($scales, 's7');
+		line-height: 1.5;
+		color: inherit;
+		transition: color var(--vlt-transition-duration) var(--vlt-transition-easing);
+		flex-basis: 100%;
+
+		@include media-breakpoint-down(md) {
+			margin-right: 0;
+		}
+
+		a {
+			color: inherit;
+		}
+
+	}
+
+	.vlt-post-category {
+		color: inherit;
+		transition: color var(--vlt-transition-duration) var(--vlt-transition-easing);
+
+		@include media-breakpoint-down(md) {
+			margin-top: px2rem(25px);
+			margin-left: 0;
+		}
+
+		a {
+			color: inherit;
+			transition: background-position var(--vlt-transition-duration) var(--vlt-transition-easing);
+			@extend %vlt_underline_link;
+		}
+
+	}
+
+	&:hover {
+		color: var(--vlt-color-0);
+		background-color: var(--vlt-color-7);
+	}
+
+}
+
+[data-vp-items-style="sodalicious_post_style_7"] .vp-portfolio__item-wrap+.vp-portfolio__item-wrap .vp-portfolio__item {
+	margin-top: -1px !important;
+}

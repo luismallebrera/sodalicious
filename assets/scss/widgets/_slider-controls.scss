@@ -1,0 +1,47 @@
+/* WIDGET: SLIDER CONTROLS
+-------------------------------------------- */
+
+.vlt-slider-controls {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	line-height: 1.1;
+	z-index: 1;
+
+	span.sep {
+		margin: 0 px2rem(15px);
+		opacity: 0.8;
+	}
+
+	.vlt-swiper-button-prev,
+	.vlt-swiper-button-next {
+		display: inline-flex;
+		line-height: inherit;
+		color: inherit;
+		cursor: pointer;
+		transition: opacity var(--vlt-transition-duration) var(--vlt-transition-easing);
+		@extend %vlt_display_2;
+	}
+
+	.vlt-swiper-pagination {
+		line-height: inherit;
+		@extend %vlt_display_1;
+
+		.swiper-pagination-current,
+		.swiper-pagination-total {
+			display: inline-flex;
+			justify-content: center;
+			min-width: .9em;
+		}
+
+		span.sep {
+			margin: 0 px2rem(2px);
+		}
+
+	}
+
+	.vlt-swiper-button-prev+.vlt-swiper-pagination {
+		margin: 0 px2rem(25px);
+	}
+
+}

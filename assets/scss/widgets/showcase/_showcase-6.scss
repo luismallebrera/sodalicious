@@ -1,0 +1,138 @@
+/* SHOWCASE: STYLE 6
+-------------------------------------------- */
+
+$min-height: 550px;
+
+.vlt-showcase--style-6 {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	min-height: $min-height;
+
+	// images
+	.vlt-showcase-images {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 100%;
+
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+		}
+
+	}
+
+	.vlt-showcase-images {
+		background-color: var(--vlt-color-1);
+	}
+
+	.vlt-showcase-images .vlt-showcase-image,
+	.vlt-showcase-image img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.vlt-showcase-image {
+
+		img {
+			width: 100%;
+			font-family: 'object-fit: cover;';
+			object-fit: cover;
+
+			&.swiper-lazy {
+				opacity: 0;
+				transition: all var(--vlt-transition-duration) var(--vlt-transition-easing);
+				transform: scale(0.85);
+			}
+
+		}
+
+	}
+
+	.swiper-slide-active {
+
+		img.swiper-lazy-loaded {
+			opacity: 1;
+			transition: all 600ms var(--vlt-transition-duration) var(--vlt-transition-easing);
+			transform: scale(1);
+		}
+
+	}
+
+	.vlt-showcase-links {
+		position: relative;
+		height: 100%;
+		padding: 0 px2rem(100px);
+		z-index: 4;
+
+		@include media-breakpoint-down(sm) {
+			padding: px2rem(40px);
+		}
+
+		.swiper-slide {
+			height: auto !important;
+		}
+
+		ul {
+			padding: 0;
+			margin: px2rem(120px) 0;
+			list-style-type: none;
+		}
+
+		li+li {
+			margin-top: px2rem(40px);
+
+			@include media-breakpoint-down(sm) {
+				margin-top: px2rem(25px);
+			}
+
+		}
+
+	}
+
+	.vlt-showcase-title {
+		display: inline-flex;
+		margin: 0;
+
+		&::after {
+			content: '\ea6c';
+			display: inline-flex;
+			margin-left: px2rem(30px);
+			font-family: map-get($icons, 'remixicon');
+			font-size: 70%;
+			font-weight: normal;
+			opacity: 0;
+			transition: transform var(--vlt-transition-duration) var(--vlt-transition-easing), opacity var(--vlt-transition-duration) var(--vlt-transition-easing);
+			transform: translateX(-15px);
+			align-self: center;
+		}
+
+		a:hover {
+			color: inherit;
+		}
+
+	}
+
+	.vlt-showcase-category {
+		margin: px2rem(10px) 0 0;
+		@extend %vlt_display_2;
+	}
+
+	.vlt-showcase-link {
+
+		&.is-active {
+
+			.vlt-showcase-title::after {
+				opacity: 1;
+				transform: translateX(0);
+			}
+
+		}
+
+	}
+
+}

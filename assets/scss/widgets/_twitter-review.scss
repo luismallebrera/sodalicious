@@ -1,0 +1,56 @@
+/* WIDGET: TWITTER REVIEW
+-------------------------------------------- */
+
+.vlt-twitter-review {
+	padding-top: px2rem(60px);
+	border-top: 2px solid var(--vlt-color-7);
+
+	&__header {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+
+	&__avatar {
+		width: px2rem(80px);
+		margin-right: px2rem(35px);
+		overflow: hidden;
+		border-radius: 50%;
+
+		img {
+			width: auto;
+		}
+
+	}
+
+	&__meta {
+		flex-basis: 100%;
+	}
+
+	&__icon {
+		position: absolute;
+		top: px2rem(10px);
+		right: px2rem(15px);
+		font-size: map-get($scales, 's4');
+		line-height: 1;
+		color: map-get($social-colors, 'twitter');
+	}
+
+	&__author {
+		margin: 0;
+	}
+
+	&__info {
+		margin: px2rem(5px) 0 0;
+		@extend %vlt_display_2;
+	}
+
+	&__content {
+		padding-right: px2rem(30px);
+		margin-top: px2rem(40px);
+		font-size: map-get($scales, 's6');
+		font-weight: 600;
+		color: var(--vlt-color-7);
+	}
+
+}

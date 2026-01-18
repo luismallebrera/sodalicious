@@ -1,0 +1,128 @@
+/* LAYOUT: GRID
+-------------------------------------------- */
+
+.container {
+	max-width: 100%;
+}
+
+@media (min-width: 1200px) {
+
+	.container {
+		max-width: 1200px;
+	}
+
+}
+
+/* MAIN
+-------------------------------------------- */
+
+.vlt-main {
+	position: relative;
+	overflow: hidden;
+}
+
+/* PAGE CONTENT
+-------------------------------------------- */
+
+.vlt-page-content {
+	background-color: var(--vlt-color-0);
+
+	&--padding {
+		padding: px2rem(120px) 0;
+	}
+
+	&--padding-top {
+		padding-top: px2rem(120px);
+	}
+
+	&--padding-bottom {
+		padding-bottom: px2rem(120px);
+	}
+
+}
+
+.vlt-page-title+.vlt-page-content--padding,
+.vlt-page-title+.vlt-page-content--padding-top {
+	padding-top: px2rem(60px);
+}
+
+/* PROTECTED CONTENT
+-------------------------------------------- */
+
+.vlt-content-protected {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: px2rem(120px) 0;
+}
+
+/* MARKUP CONTENT
+-------------------------------------------- */
+
+.vlt-content-markup {
+
+	h1,
+	.h1,
+	h2,
+	.h2,
+	h3,
+	.h3,
+	h4,
+	.h4,
+	h5,
+	.h5,
+	h6,
+	.h6 {
+		margin: px2rem(30px) 0;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	ul,
+	ol {
+		line-height: 2;
+
+		ul,
+		ol {
+			padding-left: px2rem(30px);
+			margin-bottom: 0;
+		}
+
+	}
+
+	>ul,
+	>ol {
+		margin-bottom: px2rem(30px);
+	}
+
+	.fluid-width-video-wrapper {
+		margin-bottom: px2rem(30px);
+	}
+
+}
+
+/* ELEMENTOR
+-------------------------------------------- */
+
+.elementor-column-gap-extended>.elementor-row>.elementor-column>.elementor-element-populated,
+.elementor-column-gap-extended>.elementor-column>.elementor-element-populated {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.elementor-column-gap-wider>.elementor-row>.elementor-column>.elementor-element-populated {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.elementor-column-gap-wide>.elementor-row>.elementor-column>.elementor-element-populated {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.elementor-element.h-100>.elementor-widget-container {
+	height: 100%;
+}

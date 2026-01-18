@@ -1,0 +1,68 @@
+/* MY ACCOUNT PAGE
+-------------------------------------------- */
+
+.woocommerce-MyAccount-navigation ul {
+	padding: 0;
+	margin: 0;
+	line-height: 2.5;
+	list-style-type: none;
+
+	li {
+
+		a {
+			@extend %vlt_underline_link;
+		}
+
+		&.is-active a {
+			background-size: 100% 1px;
+		}
+
+	}
+
+}
+
+.woocommerce-MyAccount-content {
+
+	.addresses .title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: px2rem(15px);
+	}
+
+}
+
+.woocommerce-EditAccountForm {
+
+	h5 {
+		margin: px2rem(30px) 0;
+	}
+
+}
+
+.vlt-form-edit-address {
+
+	h3 {
+		margin-bottom: px2rem(30px);
+	}
+
+}
+
+.vlt-woocommerce-form-login-wrapper,
+.vlt-woocommerce-reset-password-wrapper,
+.vlt-woocommerce-form-register-wrapper {
+
+	h3 {
+		margin-bottom: px2rem(30px);
+	}
+
+	.login,
+	.lost_reset_password {
+		max-width: px2rem(450px);
+	}
+
+	.vlt-btn+.vlt-underline-link {
+		margin-left: px2rem(30px);
+	}
+
+}

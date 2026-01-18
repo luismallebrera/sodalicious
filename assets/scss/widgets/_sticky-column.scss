@@ -1,0 +1,13 @@
+/* WIDGET: SLIDER CONTROLS
+-------------------------------------------- */
+
+.vlt-sticky-column {
+	-webkit-align-self: flex-start;
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+}
+
+.vlt-sticky-column.is-affixed.elementor-element.elementor-column>.elementor-column-wrap {
+	margin-top: 0;
+	margin-bottom: 0;
+}

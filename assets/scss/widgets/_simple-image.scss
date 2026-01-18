@@ -1,0 +1,66 @@
+/* WIDGET: SIMPLE IMAGE
+-------------------------------------------- */
+
+.vlt-simple-image {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	overflow: hidden;
+
+	&__mask {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 100%;
+		width: 120%;
+		z-index: 1;
+
+		.inside {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: var(--vlt-color-0);
+			transform: skewX(-8deg);
+			transform-origin: bottom;
+		}
+
+	}
+
+	&__link {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: px2rem(60px);
+		height: px2rem(60px);
+		font-size: map-get($scales, 's8');
+		line-height: 0;
+		color: var(--vlt-color-0);
+		background-color: var(--vlt-color-7);
+		opacity: 0;
+		backface-visibility: hidden;
+		z-index: 2;
+
+		i {
+			display: inline-flex;
+		}
+
+		&:hover {
+			color: var(--vlt-color-0);
+
+			i {
+				animation: vlt_rotate_180 var(--vlt-transition-duration) linear forwards;
+			}
+
+		}
+
+	}
+
+	&:hover .vlt-simple-image__link {
+		opacity: 1;
+	}
+
+}

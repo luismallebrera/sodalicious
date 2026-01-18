@@ -1,0 +1,29 @@
+/* WIDGET: DIVIDER
+-------------------------------------------- */
+
+.vlt-divider {
+	--vlt-divider-height: 1px;
+	--vlt-divider-color: var(--vlt-color-7);
+	display: flex;
+	color: var(--vlt-divider-color);
+
+	&--solid {
+
+		.vlt-divider__separator {
+			border-top: var(--vlt-divider-height) solid currentColor;
+		}
+
+	}
+
+	&--dotted {
+
+		.vlt-divider__separator {
+			height: var(--vlt-divider-height);
+			background-color: currentColor;
+			background-repeat: repeat;
+			mask-image: #{escape-svg(url('data:image/svg+xml;utf8,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="2" height="2" fill="currentColor"/></svg>'))};
+		}
+
+	}
+
+}

@@ -1,0 +1,40 @@
+/* SHOWCASE: STYLE 9
+-------------------------------------------- */
+
+.vlt-showcase--style-9 {
+
+	.vlt-showcase-item+.vlt-showcase-item {
+		margin-top: px2rem(15px);
+	}
+
+	.vlt-showcase-title {
+		display: inline-block;
+		font-size: map-get($scales, 's3');
+		line-height: 1.5;
+		color: var(--vlt-color-7);
+		background-image: linear-gradient(to left, currentColor 0%, currentColor 50%, transparent 50%);
+		background-position: 0 0;
+		background-clip: text;
+		background-size: 200%;
+		transition: background-position 500ms;
+		@include text_stroke;
+
+		@include media-breakpoint-down(lg) {
+			font-size: map-get($scales, 's4');
+		}
+
+		@include media-breakpoint-down(md) {
+			font-size: map-get($scales, 's5');
+		}
+
+		a:hover {
+			color: inherit;
+		}
+
+		&:hover {
+			background-position: -100% 0;
+		}
+
+	}
+
+}

@@ -1,0 +1,204 @@
+/* WORK: STYLE 2
+-------------------------------------------- */
+
+.vp-portfolio__items-style-sodalicious_work_style_2 {
+
+	// Overlay.
+	--vp-items-style-fade--overlay__background-color: var(--vlt-color-0);
+	--vp-items-style-fade--overlay__color: var(--vlt-color-7);
+
+	// Meta Categories.
+	--vp-items-style-fade--meta-categories__gap: .4em;
+	--vp-items-style-fade--meta-categories__separator: ", ";
+
+	// Meta.
+	--vp-items-style-fade--meta__padding-v: 0;
+	--vp-items-style-fade--meta__padding-h: 0;
+	--vp-items-style-fade--meta-items__gap: 10px;
+
+	.vp-portfolio__item a {
+		outline: none;
+		box-shadow: none;
+	}
+
+	.vp-portfolio__item-overlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		color: var(--vp-items-style-fade--overlay__color);
+		background-color: var(--vp-items-style-fade--overlay__background-color);
+		opacity: 0;
+		transition: opacity var(--vlt-transition-duration) var(--vlt-transition-easing);
+		will-change: opacity;
+
+		// Fix FireFox image blinking
+		// https://github.com/nk-o/visual-portfolio/issues/92
+		z-index: 2;
+	}
+
+	// fix some themes figcaption styles.
+	figcaption.vp-portfolio__item-overlay {
+		margin: 0;
+		font-style: inherit;
+		color: var(--vp-items-style-fade--overlay__color);
+	}
+
+	// meta
+	.vp-portfolio__item-meta-wrap {
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+	}
+
+	.vp-portfolio__item-meta {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		min-height: 100%;
+		padding: var(--vp-items-style-fade--meta__padding-v) var(--vp-items-style-fade--meta__padding-h);
+		color: inherit;
+		text-align: center;
+		flex-direction: column;
+
+		>* {
+			max-width: 100%;
+			margin-bottom: var(--vp-items-style-fade--meta-items__gap);
+			opacity: 0;
+			transition: opacity var(--vlt-transition-duration) var(--vlt-transition-easing);
+		}
+
+		> :last-child {
+			margin-bottom: 0;
+		}
+
+	}
+
+	.vp-portfolio__item-meta-title {
+		margin-top: 0;
+		margin-right: 0;
+		margin-left: 0;
+		color: inherit;
+	}
+
+	.vp-portfolio__item-meta-categories {
+		display: inline-flex;
+		margin-left: calc(-1 * var(--vp-items-style-fade--meta-categories__gap));
+		flex-wrap: wrap;
+
+		.vp-portfolio__item-meta-category {
+			display: flex;
+			margin-left: var(--vp-items-style-fade--meta-categories__gap);
+
+			@if variable-exists(rtl) and $rtl {
+
+				&::before {
+					content: var(--vp-items-style-fade--meta-categories__separator);
+				}
+
+				&:first-of-type::before {
+					content: none;
+				}
+
+			}
+
+			@else {
+
+				&::after {
+					content: var(--vp-items-style-fade--meta-categories__separator);
+				}
+
+				&:last-of-type::after {
+					content: none;
+				}
+
+			}
+
+		}
+	}
+
+	// Transitions
+	.vp-portfolio__item-img img {
+		transition: transform 1s var(--vlt-transition-easing);
+		will-change: transform;
+
+		// Fix FireFox image blinking
+		// https://github.com/nk-o/visual-portfolio/issues/92
+		z-index: 1;
+	}
+
+	// Overlay
+	.vp-portfolio__item:hover,
+	.vp-portfolio__item-focus {
+
+		.vp-portfolio__item-meta-title,
+		.vp-portfolio__item-meta-categories {
+			animation: vlt_fade_in_from_bottom var(--vlt-transition-duration) var(--vlt-transition-easing) forwards;
+		}
+
+		.vp-portfolio__item-img img {
+			transform: scale(1.1);
+		}
+
+		.vp-portfolio__item-overlay {
+			opacity: 1;
+		}
+
+	}
+
+	// align
+	.vp-portfolio__item-align-center .vp-portfolio__item-meta {
+		align-items: center;
+		text-align: center;
+	}
+
+	.vp-portfolio__item-align-left .vp-portfolio__item-meta {
+		align-items: flex-start;
+		text-align: left;
+	}
+
+	.vp-portfolio__item-align-right .vp-portfolio__item-meta {
+		align-items: flex-end;
+		text-align: right;
+	}
+
+	.vp-portfolio__item-align-top-center .vp-portfolio__item-meta {
+		align-items: center;
+		justify-content: flex-start;
+		text-align: center;
+	}
+
+	.vp-portfolio__item-align-top-left .vp-portfolio__item-meta {
+		align-items: flex-start;
+		justify-content: flex-start;
+		text-align: left;
+	}
+
+	.vp-portfolio__item-align-top-right .vp-portfolio__item-meta {
+		align-items: flex-end;
+		justify-content: flex-start;
+		text-align: right;
+	}
+
+	.vp-portfolio__item-align-bottom-center .vp-portfolio__item-meta {
+		align-items: center;
+		justify-content: flex-end;
+		text-align: center;
+	}
+
+	.vp-portfolio__item-align-bottom-left .vp-portfolio__item-meta {
+		align-items: flex-start;
+		justify-content: flex-end;
+		text-align: left;
+	}
+
+	.vp-portfolio__item-align-bottom-right .vp-portfolio__item-meta {
+		align-items: flex-end;
+		justify-content: flex-end;
+		text-align: right;
+	}
+
+}

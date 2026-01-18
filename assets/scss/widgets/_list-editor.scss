@@ -1,0 +1,44 @@
+/* WIDGET: LIST EDITOR
+-------------------------------------------- */
+
+.vlt-list-editor {
+
+	li + li {
+		margin-top: 0.6em;
+	}
+
+	ol {
+		list-style-type: none;
+		counter-reset: ol;
+
+		> li {
+			position: relative;
+			padding-left: 2.5em;
+
+			&::before {
+				content: counter(ol);
+				position: absolute;
+				top: .3em;
+				left: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 2em;
+				height: 2em;
+				font-size: .75em;
+				line-height: 1;
+				color: var(--vlt-color-0);
+				counter-increment: ol;
+				background-color: var(--vlt-color-7);
+				border-radius: 50%;
+			}
+
+			a {
+				@extend %vlt_underline_link;
+			}
+
+		}
+
+	}
+
+}

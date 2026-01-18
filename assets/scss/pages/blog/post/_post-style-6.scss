@@ -1,0 +1,36 @@
+/* POST: STYLE 6
+-------------------------------------------- */
+
+.vlt-post--style-6 {
+	padding: px2rem(40px);
+	box-shadow: inset 0 0 0 1px var(--vlt-color-2);
+	transition: box-shadow var(--vlt-transition-duration) var(--vlt-transition-easing);
+
+	&:hover {
+		box-shadow: inset 0 0 0 4px var(--vlt-color-7);
+	}
+
+	.vlt-post-category-outside {
+		margin-bottom: px2rem(25px);
+	}
+
+	.vlt-post-header {
+		margin-bottom: px2rem(30px);
+
+		.vlt-post-title {
+			font-size: map-get($scales, 's6');
+			line-height: 1.5;
+		}
+
+		.vlt-post-meta {
+			margin-top: px2rem(10px);
+		}
+
+	}
+
+	.vlt-post-footer {
+		margin-top: px2rem(30px);
+		color: var(--vlt-color-7);
+	}
+
+}

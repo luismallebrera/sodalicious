@@ -1,0 +1,27 @@
+/* PARTIAL: POST AUTHOR
+-------------------------------------------- */
+
+.vlt-post-author {
+	display: flex;
+	align-items: center;
+	color: var(--vlt-color-7);
+
+	&__avatar {
+		max-width: px2rem(45px);
+		margin-right: px2rem(15px);
+		overflow: hidden;
+		border-radius: 50%;
+		flex-shrink: 0;
+	}
+
+	&__name {
+		flex-basis: 100%;
+		@extend %vlt_display_2;
+
+		a {
+			@extend %vlt_underline_link;
+		}
+
+	}
+
+}

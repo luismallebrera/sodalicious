@@ -1,0 +1,6 @@
+/* WIDGET: TRENDING POSTS
+-------------------------------------------- */
+
+.vlt-widget.vlt_widget_trending_posts {
+	@extend %widget-recent-posts;
+}

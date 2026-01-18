@@ -1,0 +1,157 @@
+/* SHOWCASE: STYLE 12
+-------------------------------------------- */
+
+.vlt-showcase--style-12 {
+	position: relative;
+
+	.sticky-column {
+		top: 0;
+	}
+
+	.vlt-showcase-info-wrapper {
+		min-height: 100vh;
+		padding: px2rem(70px) px2rem(70px) px2rem(90px);
+		background-color: var(--vlt-color-1);
+
+		@include media-breakpoint-down(lg) {
+			padding: px2rem(45px);
+		}
+
+	}
+
+	.vlt-showcase-list {
+		padding: px2rem(120px) 10%;
+		margin: 0;
+		list-style-type: none;
+
+		@include media-breakpoint-down(md) {
+			padding: px2rem(60px) 10%;
+		}
+
+		.vlt-showcase-link {
+			opacity: .25;
+			transition: opacity var(--vlt-transition-easing) var(--vlt-transition-duration);
+
+			.vlt-showcase-title {
+				margin: 0;
+
+				a:hover {
+					color: inherit;
+				}
+
+			}
+
+			.vlt-showcase-category {
+				margin-top: px2rem(5px);
+				@extend %vlt_display_2;
+			}
+
+			&:hover,
+			&.is-active {
+				opacity: 1;
+			}
+
+		}
+
+		.vlt-showcase-link + .vlt-showcase-link {
+			margin-top: px2rem(80px);
+		}
+
+	}
+
+	.vlt-showcase-info {
+
+		.swiper-slide {
+			height: auto;
+		}
+
+		&__item {
+			display: flex;
+			height: 100%;
+			flex-direction: column;
+		}
+
+		.vlt-showcase-item {
+
+			// image
+			.vlt-showcase-image {
+				position: relative;
+				height: 50vh;
+				min-height: px2rem(450px);
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: var(--vlt-color-7-1);
+					transition: background-color var(--vlt-transition-duration) var(--vlt-transition-easing);
+					z-index: 1;
+				}
+
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					font-family: 'object-fit: cover;';
+					object-fit: cover;
+
+					&.swiper-lazy {
+						opacity: 0;
+					}
+
+					&.swiper-lazy-loaded {
+						animation: vlt_showcase_image 600ms var(--vlt-transition-duration) var(--vlt-transition-easing) forwards;
+					}
+
+				}
+
+			}
+
+			.vlt-showcase-meta {
+				display: grid;
+				margin-top: px2rem(70px);
+				margin-bottom: px2rem(50px);
+				grid-gap: px2rem(30px);
+				grid-template-columns: repeat(3, 1fr);
+
+				@include media-breakpoint-down(lg) {
+					grid-template-columns: repeat(2, 1fr);
+				}
+
+				@include media-breakpoint-down(md) {
+					grid-template-columns: 1fr;
+				}
+
+				&__title {
+					margin: 0;
+					color: var(--vlt-color-7);
+					@extend %vlt_display_1;
+				}
+
+				&__text {
+					margin-top: px2rem(10px);
+				}
+
+			}
+
+		}
+
+		.vlt-showcase-content {
+			padding-right: px2rem(30px);
+			margin-top: auto;
+			font-size: map-get($scales, 's9');
+
+			p:last-of-type {
+				margin-bottom: 0;
+			}
+
+		}
+
+	}
+
+}

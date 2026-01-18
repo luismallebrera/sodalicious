@@ -1,0 +1,51 @@
+/* PARTIAL: BACK TO TOP
+-------------------------------------------- */
+
+.vlt-site-back-to-top {
+	position: fixed;
+	right: px2rem(60px);
+	bottom: px2rem(60px);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: px2rem(60px);
+	height: px2rem(60px);
+	font-size: map-get($scales, 's12');
+	font-style: italic;
+	color: var(--vlt-color-0);
+	background-color: var(--vlt-color-7);
+	border-radius: 100%;
+	box-shadow: 0 5px 10px 0 var(--vlt-color-7-05);
+	z-index: z('back-to-top');
+
+	@include media-breakpoint-down(md) {
+		display: none;
+	}
+
+	&:hover {
+		color: var(--vlt-color-0);
+		background-color: var(--vlt-color-6);
+	}
+
+	&.is-hidden {
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	&.is-visible {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&.is-light {
+		color: var(--vlt-color-7);
+		background-color: var(--vlt-color-1);
+
+		&:hover {
+			color: var(--vlt-color-7);
+			background-color: var(--vlt-color-0);
+		}
+
+	}
+
+}

@@ -1,0 +1,29 @@
+/* WIDGET: SECTION TITLE
+-------------------------------------------- */
+
+.vlt-section-title {
+
+	&__subtitle {
+		display: inline-flex;
+		padding: px2rem(4px) px2rem(15px);
+		margin-bottom: px2rem(30px);
+		color: var(--vlt-color-7);
+		background-color: var(--vlt-color-1);
+		@extend %vlt_display_1;
+	}
+
+	h1.vlt-section-title__heading,
+	h2.vlt-section-title__heading,
+	h3.vlt-section-title__heading,
+	h4.vlt-section-title__heading,
+	h5.vlt-section-title__heading,
+	h6.vlt-section-title__heading {
+		margin: 0;
+	}
+
+	&__description {
+		margin-top: px2rem(30px);
+		margin-bottom: 0;
+	}
+
+}
